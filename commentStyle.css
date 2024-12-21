@@ -1,0 +1,98 @@
+.container-com{
+    margin-top: 20px;
+    padding: 5px;
+    width: 99%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.comment-container {
+    transform: scale(0.9);
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #b8b8b8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comment-container form input,
+.comment-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.comment-container form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.comment-container form input[type="submit"] {
+    background-color: #43abc5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.comment-container form input[type="submit"]:hover {
+    background-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    text-align: center;
+}
+
+.comments-list {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.comments-list .author{
+    font-weight: bold;
+}
+.comments-list .content{
+    margin-left: 10px;
+}
+
+.comment-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item .author {
+    font-weight: bold;
+}
+
+.comment-item .email {
+    color: #555;
+    font-size: 14px;
+}
+
+.comment-item .content {
+    margin-top: 10px;
+}
+
+.comments{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding-top:5px;
+    padding-bottom: 10px;
+}
+.comments h2{
+    margin: 20px;
+}

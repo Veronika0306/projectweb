@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kirim Berita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .news-form-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .news-form-container form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .news-form-container form input,
+        .news-form-container form textarea,
+        .news-form-container form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .news-form-container form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .news-form-container form input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .news-form-container form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: green;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-form-container">
+        <h2>Form Kirim Berita</h2>
+        <form id="newsForm">
+            <label for="name">Nama Pengirim:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan Nama Anda" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required>
+            
+            <label for="title">Judul Berita:</label>
+            <input type="text" id="title" name="title" placeholder="Masukkan Judul Berita" required>
+            
+            <label for="category">Kategori Berita:</label>
+            <select id="category" name="category" required>
+                <option value="">Pilih Kategori</option>
+                <option value="Politik">Politik</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Teknologi">Teknologi</option>
+                <option value="Olahraga">Olahraga</option>
+                <option value="Hiburan">Hiburan</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+            
+            <label for="content">Isi Berita:</label>
+            <textarea id="content" name="content" placeholder="Masukkan Isi Berita" required></textarea>
+            
+            <input type="submit" value="Kirim Berita">
+        </form>
+        <div class="message" id="message">
+            Terima kasih! Berita Anda telah terkirim.
+        </div>
+    </div>
+
+    <script>
+        // Menangani form submission
+        document.getElementById('newsForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Mengambil nilai dari form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const title = document.getElementById('title').value;
+            const category = document.getElementById('category').value;
+            const content = document.getElementById('content').value;
+
+            // Validasi sederhana (opsional)
+            if (name === '' || email === '' || title === '' || category === '' || content === '') {
+                alert('Semua kolom wajib diisi!');
+                return;
+            }
+
+            // Menampilkan pesan terima kasih
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+
+            // Mengosongkan form setelah submit
+            document.getElementById('newsForm').reset();
+        });
+    </script>
+</body>
+</html>

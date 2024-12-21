@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login Admin - BeritaKita</title>
+    <link rel="stylesheet" href="global.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #43abc5;
+    }
+
+    .login-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e0e0e0;
+    }
+
+    .login-box {
+        width: 300px;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .login-box input[type="submit"] {
+        background-color: #43abc5;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .login-box input[type="submit"]:hover {
+        background-color: palevioletred;
+    }
+
+    .login-box .forgot-password {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .login-box .forgot-password a {
+        color: blue;
+        text-decoration: none;
+    }
+
+    .login-box .forgot-password a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="dropdown">
+            <a href="index.html">
+                <i class="fa fa-home"></i> Home
+            </a>
+            
+        </div>
+    </div>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login Admin</h2>
+            <form action="admin-dashboard.html" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Masukkan Username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Masukkan Password">
+
+                <input type="submit" value="Login">
+            </form>
+            <div class="forgot-password">
+                <p><a href="#">Lupa Password?</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah pengiriman form secara default
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const validUsername = 'admin';
+        const validPassword = 'admin123';
+
+        if (username === validUsername && password === validPassword) {
+            alert('Login Berhasil! Redirect ke Dashboard.');
+            window.location.href = 'admin-dashboard.html';
+        } else {
+            document.getElementById('error-message').style.display = 'block';
+        }
+    });
+</script>
+
+</html>

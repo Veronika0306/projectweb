@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List - BeritaKita</title>
+    <link rel="stylesheet" href="listBeritaStyle.css">
+    <link rel="stylesheet" href="../global.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="dropdown">
+            <a href="#">
+                <i class="fas fa-bars"></i> MENU
+            </a>
+            <div class="dropdown-content">
+                <a href="formSaran.html">
+                    Kirim Saran
+                </a>
+                <a href="formBerita.html">
+                    Kirim Berita
+                </a>
+                <a href="loginAdmin.html">
+                    Login Admin
+                </a>
+            </div>
+        </div>
+        <div class="search">
+            <input placeholder="Cari di beritakita" type="text" />
+            <button><i class="fas fa-search src"></i></button>
+        </div>
+
+    </div>
+    <div class="maincontainer">
+        <div class="container">
+            <div class="nav">
+                <a href="../index.html">
+                    Home
+                </a>
+                <a href="../ListBerita/ListBerita.html">
+                    Berita
+                </a>
+                <a href="https://international.sindonews.com/">
+                    Internasional
+                </a>
+                <a href="foto.html">
+                    Foto
+                </a>
+                <a href="video.html">
+                    Video
+                </a>
+                <a href="https://www.msn.com/id-id/cuaca/prakiraan/in-Kembangan,Jakarta-Raya?loc=eyJsIjoiS2VtYmFuZ2FuIiwiciI6Ikpha2FydGEgUmF5YSIsInIyIjoiSmFrYXJ0YSBCYXJhdCIsImMiOiJJbmRvbmVzaWEiLCJpIjoiSUQiLCJnIjoiaWQtaWQiLCJ4IjoiMTA2LjcyODk5NjI3Njg1NTQ3IiwieSI6Ii02LjE3NzAwMDA0NTc3NjM2NyJ9&weadegreetype=C">
+                    Cuaca
+                </a>
+                <div class="dropdown">
+                    <a href="#">
+                        Daerah
+                        <i class="fas fa-caret-down">
+                        </i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">
+                            Jakarta
+                        </a>
+                        <a href="#">
+                            Bogor
+                        </a>
+                        <a href="#">
+                            Depok
+                        </a>
+                        <a href="#">
+                            Tangerang
+                        </a>
+                        <a href="#">
+                            Bekasi
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mainbody">
+                <div class="sidebar">
+                    <a href="#" data-category="terbaru" class="active">
+                        terbaru
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="edukasi">
+                        Edukasi
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="finansial">
+                        Finansial
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="teknologi">
+                        Teknologi
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="olahraga">
+                        Olahraga
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="otomotif">
+                        Otomotif
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="wisata">
+                        Wisata
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="kejuaraan">
+                        Kejuaraan
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="makanan">
+                        Makanan
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="kesehatan">
+                        Kesehatan
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="cuaca">
+                        Cuaca
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                    <a href="#" data-category="bencana">
+                        Bencana Alam
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </a>
+                </div>
+                <div class="content" id="content">
+                    <!-- Default content -->
+                    <div class="news-item">
+                        <img alt="Image" height="100"
+                            src="https://akcdn.detik.net.id/community/media/visual/2024/10/13/cristiano-ronaldo.jpeg?w=700&q=90/150"
+                            width="150" />
+                        <div class="details">
+                            <h3>Nani Percaya, Cristiano Ronaldo Bisa Main di Piala Dunia 2030</h3>
+                            <p>10 menit yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img alt="Image" height="100"
+                            src="https://akcdn.detik.net.id/community/media/visual/2024/12/21/aston-villa-vs-manchester-city-1.jpeg?w=700&q=90/150"
+                            width="150" />
+                        <div class="details">
+                            <h3>Aston Villa Vs Man City: The Citizens Kalah 1-2</h3>
+                            <p>20 menit yang lalu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+            const contentDiv = document.getElementById('content');
+
+            // Simulated content for each category
+            const newsData = {
+                terbaru: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://akcdn.detik.net.id/community/media/visual/2024/10/13/cristiano-ronaldo.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Nani Percaya, Cristiano Ronaldo Bisa Main di Piala Dunia 2030</h3>
+                        <p>10 menit yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://akcdn.detik.net.id/community/media/visual/2024/12/21/aston-villa-vs-manchester-city-1.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Aston Villa Vs Man City: The Citizens Kalah 1-2</h3>
+                        <p>20 menit yang lalu</p>
+                    </div>
+                </div>
+            `,
+                edukasi: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/07/30/ilustrasi-tidur_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Ingin Belajar Bahasa Lebih Efektif? Kuncinya Tidur!</h3>
+                        <p>30 menit yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2022/04/08/sekolah-di-jakarta-kembali-belajar-tatap-muka-secara-penuh-1_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>SNBP 2025 Pakai e-Rapor, Direktur SMA: Tak Bisa Cuci Rapor</h3>
+                        <p>40 menit yang lalu</p>
+                    </div>
+                </div>
+            `,
+                finansial: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/19/gen-z-hingga-k-popers-ramai-ramai-tolak-ppn-12-1_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Viral Hitung-hitungan PPN 12% Kenaikannya Bukan 1% tapi 9%, Benarkah?</h3>
+                        <p>50 menit yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/10/24/produk-pt-sritex_169.png?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>15 Ribu Karyawan dari 4 Anak Usaha Jadi 'Korban' Usai Sritex Jatuh Pailit</h3>
+                        <p>4 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                teknologi: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/21/devoteam_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Devoteam dan Intel Bahas Pemahaman soal Gen AI untuk Maksimalkan Bisnis</h3>
+                        <p>1 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/21/telkomsel-1.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Telkomsel Gelar Program Pelatihan AI dan Digital buat UKM, Tertarik Ikutan?</h3>
+                        <p>3 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                olahraga: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://akcdn.detik.net.id/community/media/visual/2022/12/20/trofi-aff-cup-trofi-piala-aff-piala-aff-2022-2_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Piala AFF 2024: Indonesia Dihukum Penalti, Filipina Unggul 1-0</h3>
+                        <p>1 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://akcdn.detik.net.id/community/media/visual/2024/12/21/timnas-indonesia-di-piala-aff-2024-2_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Piala AFF 2024: Susunan Pemain Indonesia Vs Filipina</h3>
+                        <p>4 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                otomotif: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/07/18/wujud-mpv-listrik-byd-m6-harga-mulai-rp-379-juta-5.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Simulasi Kredit BYD M6 Cicilan Rp 2 Jutaan per Bulan, Begini Skemanya</h3>
+                        <p>2 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/03/21/mg-vs-hev-1_43.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Jurus MG Biar Dapat Insentif Mobil Hybrid dari Pemerintah</h3>
+                        <p>6 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                wisata: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/14/ugc-dtravelers-detiktravel-27.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Pesona Alam Lembang, Petualangan yang Menyegarkan di Akhir Pekan</h3>
+                        <p>20 menit yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/20/desa-sembungan-di-wonosobo-jawa-tengah_169.png?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>4 Wisata Alam di Sembungan Wonosobo, Desa Tertinggi di Pulau Jawa</h3>
+                        <p>8 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                kejuaraan: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/20/dio-zulfikri_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Kapten LavAni Livin' Transmedia Girang Setim dengan Olimpian AS</h3>
+                        <p>3 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/20/volleyball-oly-2020-2021-tokyo-usa-fra.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Olimpian Amerika Serikat Ungkap Alasan Gabung LavAni Livin' Transmedia</h3>
+                        <p>1 hari yang lalu</p>
+                    </div>
+                </div>
+            `,
+                makanan: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/20/keren-salah-satu-resto-terbaik-di-dunia-ini-pegawainya-hanya-satu.png?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Keren! Salah Satu Resto Terbaik di Dunia Ini Pegawainya Hanya Satu</h3>
+                        <p>2 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/20/kedai-cung-ming.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Jajan Bolo Bun Lumer di Kedai Mungil di Pasar Cihapit</h3>
+                        <p>7 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                kesehatan: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2020/06/11/ilustrasi-mendengkur-ngorok_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Awas! Mendengkur Bisa Picu Masalah Jantung, Ini Penjelasan Medisnya</h3>
+                        <p>3 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2016/01/25/313b0be8-5101-49b3-b859-cb17c1ca9e62_169.jpg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Waspadai Gejala Kolesterol Tinggi yang Bisa Muncul di Mata, Jarang Ada yang Tahu!</h3>
+                        <p>5 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                cuaca: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2023/04/09/ilustrasi-cuaca-ekstrem_169.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>BMKG Prediksi Cuaca Ekstrem Terjadi di Jawa-Bali Saat Natal dan Tahun Baru</h3>
+                        <p>1 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://awsimages.detik.net.id/community/media/visual/2024/12/18/pemkot-mojokerto.jpeg?w=700&q=90/150" width="150" />
+                    <div class="details">
+                        <h3>Cuaca Ekstrem, Pj Wali Kota Mojokerto Imbau Warga untuk Waspada</h3>
+                        <p>3 jam yang lalu</p>
+                    </div>
+                </div>
+            `,
+                bencana: `
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://cdn0-production-images-kly.akamaized.net/dmmuRT8WKwO6D_oi_n8MA1yV40A=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4677861/original/080179500_1701942403-FotoJet_-_2023-12-07T163615.314.jpg/150" width="150" />
+                    <div class="details">
+                        <h3>Bencana Hidrometeorologi Intai Purwakarta, Masyarakat Diminta Tanggap Bencana Alam</h3>
+                        <p>15 jam yang lalu</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img alt="Image" height="100" src="https://cdn0-production-images-kly.akamaized.net/L6pA7GEB2lX9qn3kp6d_B2g_v6U=/0x0:1600x1200/640x360/filters:quality(75):strip_icc():format(webp):watermark(kly-media-production/assets/images/watermarks/liputan6/watermark-color-landscape-new.png,540,20,0)/kly-media-production/medias/5039774/original/010420000_1733564930-IMG-20241206-WA0045.jpg/150" width="150" />
+                    <div class="details">
+                        <h3>Bencana Alam di Sukabumi Korban Meninggal Menjadi 8 Orang, Jasad Anak Perempuan 8 Tahun Baru Ditemukan</h3>
+                        <p>2 hari yang lalu</p>
+                    </div>
+                </div>
+            `
+            };
+
+            // Event listener for sidebar links
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // Update active link
+                    sidebarLinks.forEach(link => link.classList.remove('active'));
+                    link.classList.add('active');
+
+                    // Get category
+                    const category = link.getAttribute('data-category');
+
+                    // Update content
+                    contentDiv.innerHTML = newsData[category] || '<p>Konten tidak ditemukan.</p>';
+                });
+            });
+        </script>
+</body>
+
+</html>
